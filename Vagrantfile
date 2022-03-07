@@ -11,10 +11,10 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider "virtualbox" do |vb|
     vb.gui = true
-    # vb.memory = "2048"
-    # vb.cpus = 2
-    vb.memory = "4096"
-    vb.cpus = 4
+    vb.memory = "2048"
+    vb.cpus = 2
+    # vb.memory = "4096"
+    # vb.cpus = 4
     vb.name = "pythonvm"
     vb.customize ['modifyvm', :id, '--vram', '256']
     vb.customize ['modifyvm', :id, '--accelerate2dvideo', 'off']
@@ -31,8 +31,6 @@ Vagrant.configure("2") do |config|
   # # Add desktop environment
   config.vm.provision 'shell', privileged: false, path: 'provision/xfce4.sh', name: 'xfce4.sh'
   config.vm.provision 'shell', privileged: false, path: 'provision/vboxadds.sh', name: 'vboxadds.sh'
-  # config.vm.provision :shell, inline: "sudo apt install -y --no-install-recommends ubuntu-desktop"
-  # config.vm.provision :shell, inline: "sudo apt install -y --no-install-recommends virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11"
   # # Add `vagrant` to Administrator
   # config.vm.provision :shell, inline: "sudo usermod -a -G sudo vagrant"
       
