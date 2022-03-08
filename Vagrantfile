@@ -31,14 +31,9 @@ Vagrant.configure("2") do |config|
   # # Add desktop environment
   config.vm.provision 'shell', privileged: false, path: 'provision/xfce4.sh', name: 'xfce4.sh'
   config.vm.provision 'shell', privileged: false, path: 'provision/vboxadds.sh', name: 'vboxadds.sh'
-  # # Add `vagrant` to Administrator
-  # config.vm.provision :shell, inline: "sudo usermod -a -G sudo vagrant"
-      
   config.vm.provision 'shell', privileged: false, path: 'provision/utils.sh', name: 'utils.sh'
-  
   config.vm.provision 'shell', privileged: false, path: 'provision/atom.sh', name: 'atom.sh'
   config.vm.provision 'shell', privileged: false, path: 'provision/vscode.sh', name: 'vscode.sh'
-  config.vm.provision 'shell', privileged: false, path: 'provision/fonts.sh', name: 'fonts.sh'
   config.vm.provision 'shell', privileged: false, path: 'provision/local.sh', name: 'local.sh'
   config.vm.provision 'shell', privileged: false, path: 'provision/python310.sh', name: 'python310.sh'
 
