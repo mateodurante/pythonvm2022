@@ -4,7 +4,7 @@ Name=Atom
 Comment=A hackable text editor for the 21st Century.
 GenericName=Text Editor
 Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/atom_atom.desktop /snap/bin/atom %F
-Icon=/snap/atom/282/usr/share/pixmaps/atom.png
+Icon=/snap/atom/current/usr/share/pixmaps/atom.png
 Type=Application
 StartupNotify=true
 Categories=GNOME;GTK;Utility;TextEditor;Development;

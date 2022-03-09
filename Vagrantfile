@@ -28,6 +28,9 @@ Vagrant.configure("2") do |config|
   # Upgrade installed packages
   config.vm.provision :shell, inline: "sudo apt upgrade -y"
 
+  # Remove ubuntu user
+  config.vm.provision :shell, inline: "sudo deluser --remove-home ubuntu"
+
   # # Add desktop environment
   config.vm.provision 'shell', privileged: false, path: 'provision/xfce4.sh', name: 'xfce4.sh'
   config.vm.provision 'shell', privileged: false, path: 'provision/vboxadds.sh', name: 'vboxadds.sh'
