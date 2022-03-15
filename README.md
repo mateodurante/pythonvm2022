@@ -22,8 +22,8 @@
 ### Entrar a la VM:
 
 * Al terminar de instalar abrira el login con el usuario Ubuntu, hacer click y cambiarlo por el usuario `vagrant`
-    * User: `vagrant`
-    * Password: `vagrant`
+    * User: `alumno`
+    * Password: `alumno`
 
 ### Para apagarla:
 
